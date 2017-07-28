@@ -1,12 +1,6 @@
-# Quantum Mechanical Keyboard Firmware
+# Quantum Mechanical Keyboard Firmware for NTY-Keyboard
 
-[![Build Status](https://travis-ci.org/qmk/qmk_firmware.svg?branch=master)](https://travis-ci.org/qmk/qmk_firmware)
-[![Gitter](https://img.shields.io/gitter/room/qmk/qmk_firmware.js.svg)](https://gitter.im/qmk/qmk_firmware)
-[![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
-[![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
-[![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
-
-This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](http://olkb.com), the [ErgoDox EZ](http://www.ergodox-ez.com) keyboard, and the [Clueboard product line](http://clueboard.co/).
+This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers. This firmware is customized for NTY-Keyboard Line
 
 ## Official website
 
@@ -14,17 +8,13 @@ This is a keyboard firmware based on the [tmk\_keyboard firmware](http://github.
 
 ## Supported Keyboards
 
-* [Planck](/keyboards/planck/)
-* [Preonic](/keyboards/preonic/)
-* [ErgoDox EZ](/keyboards/ergodox/)
-* [Clueboard](/keyboards/clueboard/)
-* [Cluepad](/keyboards/cluepad/)
-
-The project also includes community support for [lots of other keyboards](/keyboards/).
+* [NTY60 - Sylva](/keyboards/handwired/rantarou60/)
+* [NTY40 - Folium](/keyboards/handwired/rantarou40/)
+* [NTY40P - Radix](/keyboards/handwired/rantarou40P/)
 
 ## Maintainers
 
-QMK is developed and maintained by Jack Humbert of OLKB with contributions from the community, and of course, [Hasu](https://github.com/tmk). The OLKB product firmwares are maintained by [Jack Humbert](https://github.com/jackhumbert), the Ergodox EZ by [Erez Zukerman](https://github.com/ezuk), and the Clueboard by [Zach White](https://github.com/skullydazed).
+QMK is developed and maintained by Jack Humbert of OLKB with contributions from the community, and of course, [Hasu](https://github.com/tmk). 
 
 ## Documentation
 
