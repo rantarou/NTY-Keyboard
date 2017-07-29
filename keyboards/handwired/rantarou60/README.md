@@ -6,13 +6,14 @@ NOTE: The Arduino Micro is different than the Arduino *Pro* Micro.
 
 ## Wiring Layout
 
+TBA
 
 ## Material Checklist
-Wooden Sandwich Case
-1N4148 Diode
-330ohm Resistor
-Ice Blue Square LED
-Cherry MX Compatible switches
+- Wooden Sandwich Case
+- 1N4148 Diode
+- 330ohm Resistor
+- Ice Blue Square LED
+- Cherry MX Compatible switches
 
 ## Pinout
 

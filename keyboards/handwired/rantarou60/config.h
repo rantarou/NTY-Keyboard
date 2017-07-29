@@ -43,7 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { F0, F1, F5, F6, C7 }
+#define MATRIX_ROW_PINS { F0, F1, F4, F5, F6 }
 #define MATRIX_COL_PINS { B2, B0, D3, D2, D1, D0, D4, C6, D7, E6, B4, B5, B6, D6 }
 #define UNUSED_PINS
 
@@ -51,8 +51,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DIODE_DIRECTION COL2ROW
 
 #define BACKLIGHT_PIN B7
-//#define BACKLIGHT_BREATHING
-#define BACKLIGHT_LEVELS 5
+#define BACKLIGHT_BREATHING
+#define BACKLIGHT_LEVELS 6
 
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */

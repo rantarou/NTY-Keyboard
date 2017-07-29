@@ -1,4 +1,5 @@
 #include "rantarou60.h"
+#include "led.h"
 
 #define _QWERTY 0
 #define _FN1 1
@@ -7,10 +8,23 @@
 #define KC_X0 MO(_FN2)
 #define KC_X1 MO(_FN1)
 
+enum keyboard_macros {
+    MACRO_BACKLIT,
+    MACRO_BREATH_TOGGLE,
+    MACRO_BREATH_SPEED_INC,
+    MACRO_BREATH_SPEED_DEC,
+    MACRO_BREATH_DEFAULT
+};
+
 // Func macro definitions.
 #define KC_LED  FUNC(0)
+//#define KC_LED  M(MACRO_BACKLIT)
 #define KC_LEDI FUNC(1)
 #define KC_LEDD FUNC(2)
+#define KC_BRT  M(MACRO_BREATH_TOGGLE)
+#define KC_BRTI M(MACRO_BREATH_SPEED_INC)
+#define KC_BRTD M(MACRO_BREATH_SPEED_DEC)
+#define KC_BRTR M(MACRO_BREATH_DEFAULT)
 
 // Enable these functions using FUNC(n) macro.
 const uint16_t PROGMEM fn_actions[] = {
@@ -50,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_FN2] = KEYMAP(
  /*,----+----+----+----+----+----+----+----+----+----+----+----+----+--------. */
-        ,LED ,LEDI,LEDD,    ,    ,    ,    ,    ,    ,    ,    ,    ,        ,
+        ,LED ,LEDI,LEDD,BRT ,BRTI,BRTD,BRTR,    ,    ,    ,    ,    ,        ,
  /*|esc-`-1--`-2--`-3--`-4--`-5--`-6--`-7--`-8--`-9--`-0--`mnus`plus`--bksp--| */
           ,    ,    ,    ,    ,    ,    , 7  , 8  , 9  ,    ,    ,    ,      ,
  /*|tab---`-q--`-w--`-e--`-r--`-t--`-y--`-u--`-i--`-o--`-p--`-{--`-}--`--|---| */
@@ -67,11 +81,41 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 {
   // MACRODOWN only works in this function
       switch(id) {
-        case 0:
+        /*case 0:
           if (record->event.pressed) {
             register_code(KC_RSFT);
           } else {
             unregister_code(KC_RSFT);
+          }
+        break;*/
+
+        case MACRO_BREATH_TOGGLE:
+          if (record->event.pressed) {
+              breathing_toggle();
+          }
+        break;
+
+        case MACRO_BREATH_SPEED_INC:
+          if (record->event.pressed) {
+              breathing_speed_inc(1);
+          }
+        break;
+
+        case MACRO_BREATH_SPEED_DEC:
+          if (record->event.pressed) {
+              breathing_speed_dec(1);
+          }
+        break;
+
+        case MACRO_BREATH_DEFAULT:
+          if (record->event.pressed) {
+              breathing_defaults();
+          }
+        break;
+
+        case MACRO_BACKLIT:
+          if (record->event.pressed) {
+              backlight_step();
           }
         break;
       }
